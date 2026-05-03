@@ -1,0 +1,50 @@
+export const products = [
+  {
+    id: 'clock-tower-hoodie',
+    name: "'Clock Tower' Maroon Hoodie",
+    tagline: 'A tribute to the 174-foot icon of the NITT skyline.',
+    price: 2499,
+    color: 'Deep Maroon',
+    material: '400 GSM Heavyweight Organic Cotton, Fleece-lined',
+    image: 'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&q=80',
+    badge: 'Bestseller',
+    accent: 'maroon',
+    description: "Standing tall at 174 feet, the Clock Tower isn't just a landmark—it's the heartbeat of our campus. Gold-threaded embroidery with '1964' on the sleeve."
+  },
+  {
+    id: 'orion-tshirt',
+    name: "'Orion' Midnight Blue T-Shirt",
+    tagline: 'Inspired by the architectural marvel of the figure-eight.',
+    price: 1299,
+    color: 'Midnight Blue',
+    material: '100% Supra-Pima Cotton, Tropical-optimized',
+    image: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&q=80',
+    badge: 'New',
+    accent: 'midnight',
+    description: "Stylized geometric blueprint of the Orion Lecture Hall in Blizzard Blue. Features a small MIG-23 silhouette on the hemline—celebrating undergraduate spirit."
+  },
+  {
+    id: 'festember-tote',
+    name: "'Festember & Pragyan' Tote",
+    tagline: 'Where Culture meets Technology.',
+    price: 899,
+    color: 'Light Beige × Midnight Blue',
+    material: 'Heavy-duty 12oz Eco-Canvas, Reinforced',
+    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80',
+    badge: 'Limited',
+    accent: 'totem',
+    description: "Deccan Odyssey meets Panoptica. Inner pocket for ID card and Octagon access tokens. The perfect companion for every Fest to Remember."
+  },
+  {
+    id: 'campus-academic-pack',
+    name: "'Campus Academic Pack'",
+    tagline: 'A welcome pack for your first semester.',
+    price: 1499,
+    color: 'Multi-Color',
+    material: 'Premium ruled notebooks, stainless penstand, eco-friendly stationery',
+    image: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600&q=80',
+    badge: 'Welcome Kit',
+    accent: 'forest',
+    description: "Everything a fresher needs, curated with campus spirit. Includes stationery essentials, premium ruled notebooks, a daily reminder pad, a penstand, and a handpicked welcome pack to kickstart life at NITT."
+  }
+];
