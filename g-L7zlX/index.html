@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NITT Merch Store — Wear the Legacy</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        maroon: '#5C1E2E',
+        midnight: '#1B2A4E',
+        totem: '#A6242E',
+        beige: '#EDE3D2',
+        cream: '#F7F1E5'
+      },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'serif'],
+        sans: ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+</head>
+<body class="bg-cream text-midnight font-sans antialiased">
+
+<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-cream/80 border-b border-maroon/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-maroon text-beige flex items-center justify-center font-display font-bold text-lg">N</div>
+      <div>
+        <div class="font-display text-xl text-maroon font-bold leading-none">NITT Merch</div>
+        <div class="text-[10px] tracking-[0.2em] text-midnight/60 uppercase">Est. 1964</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="#story" class="hover:text-maroon transition">Our Story</a>
+      <a href="#products" class="hover:text-maroon transition">Shop</a>
+      <a href="#logistics" class="hover:text-maroon transition">Delivery</a>
+    </div>
+    <button id="cart-toggle" class="relative flex items-center gap-2 bg-maroon text-beige px-4 py-2 rounded-full hover:bg-totem transition-all">
+      <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+      <span class="text-sm font-medium">Cart</span>
+      <span id="cart-count" class="absolute -top-1 -right-1 bg-totem text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+    </button>
+  </div>
+</nav>
+
+<section id="story" class="pt-32 pb-20 px-6 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(circle at 20% 30%, #5C1E2E 0%, transparent 50%), radial-gradient(circle at 80% 70%, #1B2A4E 0%, transparent 50%);"></div>
+  <div class="max-w-6xl mx-auto relative">
+    <div class="text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-maroon/10 text-maroon text-xs font-semibold tracking-widest uppercase mb-8 hero-fade">
+        <span class="w-1.5 h-1.5 rounded-full bg-totem animate-pulse"></span>
+        Since 1964 · 800 Acres · Tiruchirappalli
+      </div>
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-maroon leading-[1.05] tracking-tight hero-fade">
+        Wear the Spirit<br/>
+        <span class="italic text-midnight">of the 800-Acre</span><br/>
+        Legacy.
+      </h1>
+      <p class="mt-8 max-w-2xl mx-auto text-lg text-midnight/70 leading-relaxed hero-fade">
+        From the shadow of the <span class="text-maroon font-semibold">174-foot Clock Tower</span> to the innovative corridors of the <span class="text-midnight font-semibold">Orion complex</span>—every thread tells a story of ambition, grit, and <em>Satyameva Jayate</em>.
+      </p>
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4 hero-fade">
+        <a href="#products" class="group bg-maroon hover:bg-totem text-beige px-8 py-3.5 rounded-full font-medium transition-all flex items-center gap-2 shadow-lg shadow-maroon/20">
+          Shop the Collection
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="#logistics" class="px-8 py-3.5 rounded-full font-medium border border-midnight/20 hover:border-maroon hover:text-maroon transition">
+          Delivery Info
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 hero-fade">
+      <div class="text-center p-6 border-l border-maroon/20">
+        <div class="font-display text-4xl font-bold text-maroon">1964</div>
+        <div class="text-xs uppercase tracking-wider text-midnight/60 mt-1">Established</div>
+      </div>
+      <div class="text-center p-6 border-l border-maroon/20">
+        <div class="font-display text-4xl font-bold text-maroon">800</div>
+        <div class="text-xs uppercase tracking-wider text-midnight/60 mt-1">Acres of Legacy</div>
+      </div>
+      <div class="text-center p-6 border-l border-maroon/20">
+        <div class="font-display text-4xl font-bold text-maroon">174ft</div>
+        <div class="text-xs uppercase tracking-wider text-midnight/60 mt-1">Clock Tower</div>
+      </div>
+      <div class="text-center p-6 border-l border-maroon/20">
+        <div class="font-display text-4xl font-bold text-maroon">∞</div>
+        <div class="text-xs uppercase tracking-wider text-midnight/60 mt-1">Alumni Pride</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="px-6 py-12 bg-beige/40">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="flex items-start gap-4">
+      <div class="w-12 h-12 rounded-full bg-maroon/10 text-maroon flex items-center justify-center flex-shrink-0">
+        <i data-lucide="shirt" class="w-5 h-5"></i>
+      </div>
+      <div>
+        <div class="font-semibold text-midnight">Apparel</div>
+        <div class="text-sm text-midnight/60">Hoodies, Tees & Polos celebrating campus landmarks.</div>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <div class="w-12 h-12 rounded-full bg-midnight/10 text-midnight flex items-center justify-center flex-shrink-0">
+        <i data-lucide="briefcase" class="w-5 h-5"></i>
+      </div>
+      <div>
+        <div class="font-semibold text-midnight">Accessories</div>
+        <div class="text-sm text-midnight/60">Festember & Pragyan totes, sleeves, pins, caps.</div>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <div class="w-12 h-12 rounded-full bg-totem/10 text-totem flex items-center justify-center flex-shrink-0">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+      </div>
+      <div>
+        <div class="font-semibold text-midnight">Stationery</div>
+        <div class="text-sm text-midnight/60">Embossed journals & pens carrying our motto.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="px-6 py-24">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-end justify-between mb-12 flex-wrap gap-4 reveal">
+      <div>
+        <div class="text-xs uppercase tracking-[0.3em] text-totem font-semibold mb-3">Featured Collection</div>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-maroon">Wear the Landmarks.</h2>
+      </div>
+      <p class="max-w-md text-midnight/60">Three hero pieces, crafted in the institute's official palette—locally relevant, globally competitive.</p>
+    </div>
+
+    <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+
+<section id="logistics" class="px-6 py-24 bg-midnight text-beige relative overflow-hidden">
+  <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(45deg, transparent 48%, #EDE3D2 49%, #EDE3D2 51%, transparent 52%); background-size: 30px 30px;"></div>
+  <div class="max-w-6xl mx-auto relative">
+    <div class="text-center mb-16 reveal">
+      <div class="text-xs uppercase tracking-[0.3em] text-totem font-semibold mb-3">Order & Logistics</div>
+      <h2 class="font-display text-4xl md:text-5xl font-bold">From Campus to <span class="italic">Wherever You Are.</span></h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-8 bg-beige/5 border border-beige/10 rounded-2xl hover:border-totem/40 transition reveal">
+        <div class="w-12 h-12 rounded-xl bg-totem/20 text-totem flex items-center justify-center mb-5">
+          <i data-lucide="map-pin" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-display text-2xl font-bold mb-2">Self-Pickup</h3>
+        <p class="text-beige/70 text-sm leading-relaxed">Collect from the Student Activity Centre (SAC) or the Octagon Centre help desk.</p>
+      </div>
+      <div class="p-8 bg-beige/5 border border-beige/10 rounded-2xl hover:border-totem/40 transition reveal">
+        <div class="w-12 h-12 rounded-xl bg-totem/20 text-totem flex items-center justify-center mb-5">
+          <i data-lucide="truck" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-display text-2xl font-bold mb-2">Hostel Delivery</h3>
+        <p class="text-beige/70 text-sm leading-relaxed">Free delivery to Agate, Coral, Diamond & all hostels for orders above ₹999.</p>
+      </div>
+      <div class="p-8 bg-beige/5 border border-beige/10 rounded-2xl hover:border-totem/40 transition reveal">
+        <div class="w-12 h-12 rounded-xl bg-totem/20 text-totem flex items-center justify-center mb-5">
+          <i data-lucide="globe" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-display text-2xl font-bold mb-2">Alumni Worldwide</h3>
+        <p class="text-beige/70 text-sm leading-relaxed">Global shipping. Relive Clock Tower memories anywhere on Earth.</p>
+      </div>
+    </div>
+
+    <div class="mt-16 text-center reveal">
+      <div class="font-display text-2xl italic text-totem">Satyameva Jayate</div>
+      <div class="text-xs uppercase tracking-[0.3em] text-beige/50 mt-2">Truth Alone Triumphs</div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-maroon text-beige px-6 py-12">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-beige text-maroon flex items-center justify-center font-display font-bold text-lg">N</div>
+      <div>
+        <div class="font-display text-xl font-bold leading-none">NITT Merch Store</div>
+        <div class="text-xs tracking-[0.2em] text-beige/60 uppercase">Wear the Legacy</div>
+      </div>
+    </div>
+    <div class="text-sm text-beige/70 text-center md:text-right">
+      © 2026 NIT Tiruchirappalli · For bulk orders, contact the Student Council Merchandise Wing.
+    </div>
+  </div>
+</footer>
+
+<div id="cart-overlay" class="fixed inset-0 bg-midnight/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+<aside id="cart-panel" class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-cream z-[70] translate-x-full transition-transform duration-500 ease-out shadow-2xl flex flex-col">
+  <div class="px-6 py-5 border-b border-maroon/10 flex items-center justify-between">
+    <div>
+      <div class="font-display text-2xl font-bold text-maroon">Your Cart</div>
+      <div class="text-xs text-midnight/60 uppercase tracking-wider">Wear the Legacy</div>
+    </div>
+    <button id="cart-close" class="w-9 h-9 rounded-full hover:bg-maroon/10 flex items-center justify-center transition">
+      <i data-lucide="x" class="w-5 h-5"></i>
+    </button>
+  </div>
+  <div id="cart-items" class="flex-1 overflow-y-auto px-6 py-4 space-y-4"></div>
+  <div class="px-6 py-5 border-t border-maroon/10 bg-beige/30">
+    <div class="flex justify-between items-center mb-4">
+      <span class="text-sm uppercase tracking-wider text-midnight/60">Subtotal</span>
+      <span id="cart-total" class="font-display text-2xl font-bold text-maroon">₹0</span>
+    </div>
+    <button id="checkout-btn" class="w-full bg-maroon hover:bg-totem text-beige py-3.5 rounded-full font-medium transition flex items-center justify-center gap-2">
+      Checkout <i data-lucide="arrow-right" class="w-4 h-4"></i>
+    </button>
+    <div class="text-[11px] text-center text-midnight/50 mt-3">Free hostel delivery on orders above ₹999</div>
+  </div>
+</aside>
+
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-midnight text-beige px-5 py-3 rounded-full text-sm font-medium shadow-2xl translate-y-20 opacity-0 transition-all duration-300 z-[80] flex items-center gap-2">
+  <i data-lucide="check-circle" class="w-4 h-4 text-totem"></i>
+  <span id="toast-msg">Added to cart</span>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
