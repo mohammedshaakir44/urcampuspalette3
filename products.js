@@ -6,7 +6,7 @@ export const products = [
     price: 2499,
     color: 'Deep Maroon',
     material: '400 GSM Heavyweight Organic Cotton, Fleece-lined',
-    image: 'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&q=80',
+    image: '/images/clock tower hoodie sample.png',
     badge: 'Bestseller',
     accent: 'maroon',
     description: "Standing tall at 174 feet, the Clock Tower isn't just a landmark—it's the heartbeat of our campus. Gold-threaded embroidery with '1964' on the sleeve."
