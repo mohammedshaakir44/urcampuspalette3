@@ -34,5 +34,17 @@ export const products = [
     badge: 'Limited',
     accent: 'totem',
     description: "Deccan Odyssey meets Panoptica. Inner pocket for ID card and Octagon access tokens. The perfect companion for every Fest to Remember."
+  },
+  {
+    id: 'campus-academic-pack',
+    name: "'Campus Academic Pack'",
+    tagline: 'A welcome pack for your first semester.',
+    price: 1499,
+    color: 'Multi-Color',
+    material: 'Premium ruled notebooks, stainless penstand, eco-friendly stationery',
+    image: '',   // add your mockup image URL here
+    badge: 'Welcome Kit',
+    accent: 'navy',
+    description: "Everything a fresher needs, curated with campus spirit. Includes stationery essentials, premium ruled notebooks, a daily reminder pad, a penstand, and a handpicked welcome pack to kickstart life at NITT."
   }
 ];
