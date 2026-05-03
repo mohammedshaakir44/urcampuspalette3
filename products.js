@@ -42,7 +42,7 @@ export const products = [
     price: 1499,
     color: 'Multi-Color',
     material: 'Premium ruled notebooks, stainless penstand, eco-friendly stationery',
-    image: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600&q=80',
+    image: '/images/first year kit.jpg',
     badge: 'Welcome Kit',
     accent: 'forest',
     description: "Everything a fresher needs, curated with campus spirit. Includes stationery essentials, premium ruled notebooks, a daily reminder pad, a penstand, and a handpicked welcome pack to kickstart life at NITT."
